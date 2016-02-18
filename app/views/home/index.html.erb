@@ -1,2 +1,13 @@
 <h1>Home#index</h1>
-<p>Find me in app/views/home/index.html.erb</p>
+<table>
+<% @books.each do |b| %>
+	<tr>
+		<td><%= b.title %></td>
+		<td><%= b.year %></td>
+		<td><%= b.isbn %></td>
+		<td><%= b.authors.pluck("name").join(', ') %></td>
+	</tr>
+<%end%>
+	<li> <%= link_to "Authors", authors_path %> </li>
+</table>
+
