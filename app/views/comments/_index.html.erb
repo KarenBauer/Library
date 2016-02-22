@@ -1,0 +1,21 @@
+<h1>Comments</h1>
+<table>
+<% @book.comments.each do |c| %>
+	<tr>
+		<td><%= c.user.present? ? c.user.name : 'Anonymous' %></td>
+		<td><%= c.text %></td>
+	</tr>
+<%end%>
+<tr>
+	<td><%= form_for ([@book,@book.comments.build]) do |f| %>
+	  <p>
+	    <%= f.label :comment %><br>
+	    <%= f.text_field :text %>
+	  </p>		 
+	  <p>
+	    <%= f.submit %>
+	  </p>
+	<% end %></td>
+	<td><%= @errors %></td>
+</tr>
+</table>
