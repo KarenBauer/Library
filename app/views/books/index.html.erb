@@ -9,6 +9,9 @@
 		<td>
 			<li> <%= link_to "View", book_path(b.id) %> </li>
 		</td>
+		<td>
+			<li> <%= link_to "Request", new_book_request_path(b.id) %> </li>
+		</td>
 	</tr>
 <%end%>
 	<li> <%= link_to "Authors", authors_path %> </li>

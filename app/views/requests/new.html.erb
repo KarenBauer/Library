@@ -1,0 +1,23 @@
+<h1>Create request<h1>
+<table>
+<tr>
+  <td>
+  <%= form_for ([@current_book, @request]) do |f| %>
+  <p>
+    <%= f.label :from %><br>
+    <%= f.text_field :from_date %>
+  </p>
+  <p>
+    <%= f.label :to %><br>
+    <%= f.text_field :to_date %>
+  </p>
+  <p>
+    <%= f.submit %>
+  </p>
+  <% end %>
+  </td>
+</tr>
+<tr>
+  <td><%= @errors %></td>
+</tr>
+</table>

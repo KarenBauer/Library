@@ -1,0 +1,33 @@
+<h1><%="Request the book: "%><%= @current_book.title%></h1>
+<table>
+<%="Requests"%>
+<%@book_requests.each do |request|%>
+  <tr>
+    <td><%="User: "%><%= request.user.email %><%=", "%></td>
+    <td><%="Status: "%><%= request.status %><%=", "%></td>
+    <td><%="From date: "%><%= request.from_date %><%=", "%></td>
+    <td><%="To date: "%><%= request.to_date %></td>
+  </tr>
+<%end%>
+<tr>
+  <td>
+  <%= form_for :request do |f| %>
+  <p>
+    <%= f.label :from %><br>
+    <%= f.text_field :from_date %>
+  </p>
+  <p>
+    <%= f.label :to %><br>
+    <%= f.text_field :to_date %>
+  </p>
+  <p>
+    <%= f.submit %>
+  </p>
+  <% end %>
+  </td>
+  </tr>
+  <tr>
+  <td><%= @errors %></td>
+  </tr>
+
+</table>

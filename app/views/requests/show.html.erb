@@ -1,0 +1,13 @@
+<h1> Requests from the book: </h1>
+<table>
+<%@book_requests.each do |request|%>
+  <tr>
+    <td><%="User: "%><%= request.user.email %><%=", "%></td>
+    <td><%="Status: "%><%= request.status %><%=", "%></td>
+    <td><%="From date: "%><%= request.from_date %><%=", "%></td>
+    <td><%="To date: "%><%= request.to_date %></td>
+  </tr>
+<%end%>
+</table>
+<%= render 'requests/index' %>
+
