@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   root to: 'books#index'
   resources :authors
   resources :books do
-    resources :comments
+    resources :comments, :requests
   end
 
   # The priority is based upon order of creation: first created -> highest priority.
