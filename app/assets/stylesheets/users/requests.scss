@@ -1,0 +1,59 @@
+table {
+  width: 50%;
+  margin:0 auto;
+  border-collapse: collapse;
+}
+
+td {
+  border-bottom: 1px solid rgb(219,219,219);
+  border-top: 1px solid rgb(219,219,219);
+  padding: 20px 0 20px 0;
+  font-family: 'Lato', sans-serif;
+}
+
+tr:last-child td{
+  border-bottom: 0;
+}
+
+.from-to-date, .status{
+  font-size: 14px;
+}
+
+.book-title, .book-authors{
+  font-size: 18px;
+}
+
+.from-to-date, .status{
+  font-size: 14px;
+}
+
+.book-title, .book-authors{
+  font-size: 18px;
+}
+
+.from-to-date, .book-title{
+  font-weight: 900;
+}
+
+.book-authors{
+  font-weight: 300;
+}
+.status{
+  font-weight: bolder;
+}
+.status-Pending {
+  color: rgb(176,189,188);
+}
+
+.status-Aproved {
+  color: rgb(22,192,174);
+}
+
+.status-Denied {
+  color: rgb(240,121,89);
+}
+
+.my_books{
+  border-bottom: 4px solid #000;
+  padding-bottom: 28px;
+}

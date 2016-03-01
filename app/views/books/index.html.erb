@@ -1,19 +1,40 @@
-<h1>Home#index</h1>
-<table>
-<% @books.each do |b| %>
-	<tr>
-		<td><%= b.title %></td>
-		<td><%= b.year %></td>
-		<td><%= b.isbn %></td>
-		<td><%= b.authors.pluck("name").join(', ') %></td>
-		<td>
-			<li> <%= link_to "View", book_path(b.id) %> </li>
-		</td>
-		<td>
-			<li> <%= link_to "Request", new_book_request_path(b.id) %> </li>
-		</td>
-	</tr>
-<%end%>
-	<li> <%= link_to "Authors", authors_path %> </li>
-</table>
+<link href='https://fonts.googleapis.com/css?family=Abril+Fatface' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic,900,900italic,300italic,300,100,100italic' rel='stylesheet' type='text/css'>
+
+<header>
+		<h1>The Library</h1>
+		<div class='header-right'>
+		<% if user_signed_in? %>
+			<span class= 'my_books'><a href="<%=user_requests_path('me')%>">My books</a></span>
+			<span class='log_out'>
+				<%= link_to "LOG OUT", destroy_user_session_path, method: :delete %>
+			</span>
+		<%else%>
+			<span class='log_in'>
+				<%= link_to "LOG IN", user_session_path, method: :create %>
+			</span>
+		<%end%>
+	</div>
+</header>
+<content>
+	<h2>Books on the library</h2>
+	<table>
+	<% @books.each do |b| %>
+		<tr>
+			<td class='title'><%= b.title %></td>
+			<td class='authors'><%= b.authors.pluck("name").join(', ') %></td>
+			<td class='year'><%= b.year %></td>
+			<!--td><%= b.isbn %></td-->
+			<td>
+				<!--li> <%= link_to "View", book_path(b.id) %> </li-->
+			</td>
+			<td>
+				<li class='request'> <%= link_to "Request", new_book_request_path(b.id) %> </li>
+			</td>
+		</tr>
+	<%end%>
+		<!--li> <%= link_to "Authors", authors_path %> </li-->
+	</table>
+</content>
+
 
