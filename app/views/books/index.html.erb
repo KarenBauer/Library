@@ -1,19 +1,22 @@
-<h1>Home#index</h1>
-<table>
-<% @books.each do |b| %>
-	<tr>
-		<td><%= b.title %></td>
-		<td><%= b.year %></td>
-		<td><%= b.isbn %></td>
-		<td><%= b.authors.pluck("name").join(', ') %></td>
-		<td>
-			<li> <%= link_to "View", book_path(b.id) %> </li>
-		</td>
-		<td>
-			<li> <%= link_to "Request", new_book_request_path(b.id) %> </li>
-		</td>
-	</tr>
-<%end%>
-	<li> <%= link_to "Authors", authors_path %> </li>
-</table>
+<content>
+	<h2>Books on the library</h2>
+	<table>
+	<% @books.each do |b| %>
+		<tr>
+			<td class='title'><%= b.title %></td>
+			<td class='authors'><%= b.authors.pluck("name").join(', ') %></td>
+			<td class='year'><%= b.year %></td>
+			<!--td><%= b.isbn %></td-->
+			<td>
+				<!--li> <%= link_to "View", book_path(b.id) %> </li-->
+			</td>
+			<td>
+				<li class='request'> <%= link_to "Request", new_book_request_path(b.id) %> </li>
+			</td>
+		</tr>
+	<%end%>
+		<!--li> <%= link_to "Authors", authors_path %> </li-->
+	</table>
+</content>
+
 

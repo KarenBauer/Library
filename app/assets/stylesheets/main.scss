@@ -1,0 +1,47 @@
+h2{
+  font-family: 'Abril Fatface', cursive;
+  font-size: 36px;
+  text-align: center;
+  margin-bottom: 51px;
+}
+
+td {
+  border-bottom: 1px solid rgb(219,219,219);
+  border-top: 1px solid rgb(219,219,219);
+  padding: 20px 0 20px 0;
+  font-family: 'Lato', sans-serif;
+}
+
+.title{
+  font-weight: 900;
+  font-size: 18px;
+}
+
+.authors, .year{
+  font-weight: 300;
+}
+
+li{
+  font-weight: bolder;
+  font-size: 14px;
+  list-style-type: none;
+}
+
+a{
+  color: black;
+  text-decoration: none;
+}
+
+.request a{
+  text-decoration:underline;
+}
+
+table {
+  width: 50%;
+  margin:0 auto;
+  border-collapse: collapse;
+}
+
+tr:last-child td{
+  border-bottom: 0;
+}

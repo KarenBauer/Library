@@ -1,0 +1,13 @@
+<content>
+  <h2>Books on my shelf<h2>
+  <table>
+    <%@requests.each do |req|%>
+    <tr>
+      <td class='from-to-date'><%=req.from_date%><%=' / '%><%=req.to_date%></td>
+      <td class='book-title'><%=req.book.title%></td>
+      <td class='book-authors'><%=req.book.authors.pluck("name").join(', ') %></td>
+      <td class='status status-<%=req.status%>'><%=req.status%></td>
+    </tr>
+    <%end%>
+  </table>
+</content>

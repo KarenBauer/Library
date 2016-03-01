@@ -10,6 +10,42 @@
  * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
  * file per style scope.
  *
- *= require_tree .
+ *= require main
  *= require_self
  */
+header{
+  font-family: 'Abril Fatface', cursive;
+  border-bottom: 1px solid black;
+  padding-bottom: 15px;
+  margin: 0px 0px 61px 48px;
+  display: inline-block;
+  width: 92%;
+}
+
+h1{
+  font-size: 30px;
+  width: 80%;
+  float: left;
+}
+
+h2{
+  font-family: 'Abril Fatface', cursive;
+  font-size: 36px;
+  text-align: center;
+  margin-bottom: 51px;
+}
+
+.header-right{
+  float: left;
+  font-size: 18px;
+  width: 20%;
+  margin-top: 40px;
+}
+
+.log_out{
+  margin-right: 49px;
+  padding-left: 53px;
+}
+
+
+
