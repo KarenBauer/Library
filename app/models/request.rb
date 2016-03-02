@@ -11,7 +11,5 @@ class Request < ActiveRecord::Base
       errors.add(:atention, ": The book in this dates is not available")
     end
   end
-
-
 end
 
