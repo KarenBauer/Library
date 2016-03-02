@@ -7,7 +7,7 @@ ActiveAdmin.register Request, as: 'BookRequest' do
 
   form do |f|
     f.inputs "Requests Details" do
-      f.input :status, :label => 'Status', :as => :select, :collection =>  ['Pending', 'Aproved', 'Denied'], include_blank: false
+      f.input :status, :label => 'Status', :as => :select, :collection =>  Request.statuses, include_blank: false
     end
     f.actions
   end
