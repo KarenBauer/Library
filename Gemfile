@@ -37,6 +37,7 @@ gem 'devise'
 
 gem 'date_validator'
 
+gem 'activeadmin', '~> 1.0.0.pre1', github: 'activeadmin'
 
 
 group :development, :test do
