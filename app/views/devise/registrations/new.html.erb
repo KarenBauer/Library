@@ -1,0 +1,27 @@
+<h2>Join The Library</h2>
+
+<%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+  <%= devise_error_messages! %>
+
+   <div class="field">
+    <input type="text" placeholder ="Name"/>
+  </div>
+
+  <div class="field">
+    <input type="email" placeholder="Email" %>
+  </div>
+
+  <div class="field">
+    <input type="password" placeholder="Password" %>
+  </div>
+
+  <div class="field">
+    <input type="password" placeholder="Confirm password" %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit "Sign up" %>
+  </div>
+<% end %>
+
+<%= render "devise/shared/links" %>

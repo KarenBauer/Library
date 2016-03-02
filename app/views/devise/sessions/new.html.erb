@@ -1,0 +1,24 @@
+<h2>Welcome to The Library</h2>
+<content>
+  <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+    <div class="field">
+      <input type="email" placeholder ="Email"/>
+    </div>
+
+    <div class="field">
+      <input type="password" placeholder ="Password"/>
+    </div>
+
+    <div class="forgot-password"
+      <%- if devise_mapping.recoverable? && controller_name != 'passwords' && controller_name != 'registrations' %>
+        <%= link_to "I forgot my password", new_password_path(resource_name) %><br/>
+      <% end -%>
+    </div>
+
+    <div class="actions">
+      <%= f.submit "Sign in" %>
+    </div>
+  <% end %>
+</content>
+
+<%= render "devise/shared/links" %>
